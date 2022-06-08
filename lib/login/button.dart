@@ -65,12 +65,7 @@ class Button extends StatelessWidget {
               backgroundColor:
                   MaterialStateColor.resolveWith((states) => Colors.purple)),
           onPressed: (() async {
-            await service.signIn(email: email.text, password: pass.text);
-            if (service.getUserData() != 'null') {
-              Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (context) => MyApp()),
-                  (Route<dynamic> route) => false);
-            }
+            await service.signUp(email: email.text, password: pass.text);
           }),
           child: Center(
             child: Text(

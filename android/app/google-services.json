@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "43234131637",
-    "project_id": "bacakomik-reza",
-    "storage_bucket": "bacakomik-reza.appspot.com"
+    "project_number": "386737771908",
+    "project_id": "iminixx-flutter-firebase",
+    "storage_bucket": "iminixx-flutter-firebase.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:43234131637:android:d70193c5b964b3fba0c8fc",
+        "mobilesdk_app_id": "1:386737771908:android:e96fc56e911a99f508b9d1",
         "android_client_info": {
           "package_name": "com.example.bacacomic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "43234131637-6f06f3fppvvng087et468tbncehhjs6a.apps.googleusercontent.com",
+          "client_id": "386737771908-hoqobcdimbo1jri28drsu6ta6qar3fqu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAICwDwO5nPe8zuHBeaEbZjQZLb9HwEtVw"
+          "current_key": "AIzaSyBpvdaTxfcICN2VU595DKxq1__GILgv4dQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "43234131637-6f06f3fppvvng087et468tbncehhjs6a.apps.googleusercontent.com",
+              "client_id": "386737771908-hoqobcdimbo1jri28drsu6ta6qar3fqu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "386737771908-9r956bv660cc90nef4g0rtt9q98fnfbk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bacacomic"
+              }
             }
           ]
         }

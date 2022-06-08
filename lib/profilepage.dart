@@ -2,6 +2,10 @@ import 'package:bacacomic/login/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'color.dart';
+import 'package:bacacomic/auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+AuthenticationService service = AuthenticationService(FirebaseAuth.instance);
 
 class profilepage extends StatelessWidget {
   const profilepage({Key? key}) : super(key: key);
@@ -20,25 +24,27 @@ class profilepage extends StatelessWidget {
             child: Center(
               child: GestureDetector(
                 onTap: () {
-                  clearPreferences();
+                  //clearPreferences();
+                  service.signOut();
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
                           builder: (BuildContext context) => LoginPage()),
                       (route) => false);
                 },
                 child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.exit_to_app,
-                        color: black,
-                        size: 50,
-                      ),
-                      Text(
-                        "Log Out",
-                        style: TextStyle(color: black),
-                      ),
-                    ]),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.exit_to_app,
+                      color: black,
+                      size: 50,
+                    ),
+                    Text(
+                      "Log Out",
+                      style: TextStyle(color: black),
+                    ),
+                  ],
+                ),
               ),
             ),
           )),
