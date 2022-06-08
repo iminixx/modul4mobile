@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,32 +49,21 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB-2d6KbTjC6ZzwBsqLP2eFm2BT277PIVU',
-    appId: '1:43234131637:web:6205a0eeb4b7ed26a0c8fc',
-    messagingSenderId: '43234131637',
-    projectId: 'bacakomik-reza',
-    authDomain: 'bacakomik-reza.firebaseapp.com',
-    storageBucket: 'bacakomik-reza.appspot.com',
-    measurementId: 'G-L9MRFJNFRS',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAICwDwO5nPe8zuHBeaEbZjQZLb9HwEtVw',
-    appId: '1:43234131637:android:d70193c5b964b3fba0c8fc',
-    messagingSenderId: '43234131637',
-    projectId: 'bacakomik-reza',
-    storageBucket: 'bacakomik-reza.appspot.com',
+    apiKey: 'AIzaSyBpvdaTxfcICN2VU595DKxq1__GILgv4dQ',
+    appId: '1:386737771908:android:e96fc56e911a99f508b9d1',
+    messagingSenderId: '386737771908',
+    projectId: 'iminixx-flutter-firebase',
+    storageBucket: 'iminixx-flutter-firebase.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB54Rh4zxWz9ULIIP3zp9c-U4yXhTFCz3U',
-    appId: '1:43234131637:ios:862abcfdf0553ca0a0c8fc',
-    messagingSenderId: '43234131637',
-    projectId: 'bacakomik-reza',
-    storageBucket: 'bacakomik-reza.appspot.com',
-    iosClientId:
-        '43234131637-dan55gcokab8tdj2c0112q1am5q547a8.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDFC7BTJl27qhyMwgjAEbqxAY0eGtM05B8',
+    appId: '1:386737771908:ios:1c3cd98f21420f7508b9d1',
+    messagingSenderId: '386737771908',
+    projectId: 'iminixx-flutter-firebase',
+    storageBucket: 'iminixx-flutter-firebase.appspot.com',
+    iosClientId: '386737771908-9r956bv660cc90nef4g0rtt9q98fnfbk.apps.googleusercontent.com',
     iosBundleId: 'com.example.bacacomic',
   );
 }

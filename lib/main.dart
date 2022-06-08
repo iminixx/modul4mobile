@@ -11,6 +11,11 @@ import 'color.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'notification_handler.dart';
+import 'auth.dart';
 // void main() {
 //   runApp(MaterialApp(home: MyApp()));
 // }
@@ -18,6 +23,9 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await initializaNotification();
+  AuthenticationService service = AuthenticationService(FirebaseAuth.instance);
   isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
   loggedInUsername = prefs.getString('loggedInUsername') ?? '';
   runApp(MaterialApp(home: isLoggedIn == false ? LoginPage() : MyApp()));
