@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "43234131637",
+    "project_id": "bacakomik-reza",
+    "storage_bucket": "bacakomik-reza.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43234131637:android:d70193c5b964b3fba0c8fc",
+        "android_client_info": {
+          "package_name": "com.example.bacacomic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43234131637-6f06f3fppvvng087et468tbncehhjs6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAICwDwO5nPe8zuHBeaEbZjQZLb9HwEtVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43234131637-6f06f3fppvvng087et468tbncehhjs6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
